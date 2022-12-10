@@ -26,12 +26,14 @@ const Campus = db.define("campus", {
 },
 
   description: {
-    type: Sequelize.TEXT,
+    type: Sequelize.STRING,
+    allowNull: true,
+    defaultValue: "Campus description",
   },
 
   imageUrl: {
-    type: Sequelize.STRING
-    //defaultValue: "https://timesandtrendsacademy.com/wp-content/uploads/How-to-pick-the-best-fashion-designing-college-re850.jpg",
+    type: Sequelize.STRING,
+    defaultValue: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
   }
 });
 

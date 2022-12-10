@@ -24,12 +24,13 @@ const Student = db.define("student", {
   },
 
   imageUrl: {
-    type: Sequelize.STRING
-    //defaultValue: "https://64.media.tumblr.com/4c62bf7c01d15c7655adeb8a36b9702d/e7531ecdce802bee-c9/s640x960/838eaa8ff68dc51c2b2a38a088767a9704130d58.jpg"
+    type: Sequelize.STRING,
+    defaultValue: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
   },
 
   gpa: {
     type: Sequelize.DOUBLE,
+    allowNull: false,
     validate: {
       min: 0.0,
       max: 4.0
